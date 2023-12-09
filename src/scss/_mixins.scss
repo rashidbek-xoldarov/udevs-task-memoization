@@ -1,0 +1,51 @@
+@mixin mobile-first($min) {
+  @media only screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin desktop-first($max) {
+  @media only screen and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin list-unstiled {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+%link-unstiled {
+  text-decoration: none;
+}
+
+@mixin psevdoelements($display: inline-block, $width, $height, $content: "") {
+  display: $display;
+  width: $width;
+  height: $height;
+  content: $content;
+}
+
+@mixin bgImages($position-x: calc(50% + 0px), $repeat: no-repeat, $size) {
+  background-size: $size;
+  background-position: $position-x center;
+  background-repeat: $repeat;
+}
+
+@mixin centerbetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin centerStart {
+  display: flex;
+  align-items: center;
+}
+
+@mixin centerCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
